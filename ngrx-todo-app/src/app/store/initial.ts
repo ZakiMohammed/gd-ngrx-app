@@ -1,4 +1,4 @@
-import { TaskState } from './model';
+import { TaskState } from './models';
 
 export const initialState: TaskState = {
   loading: false,

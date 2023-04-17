@@ -1,5 +1,5 @@
 import { createReducer, on } from '@ngrx/store';
-import { TaskState } from './model';
+import { TaskState } from './models';
 import { initialState } from './initial';
 import * as actions from './actions';
 

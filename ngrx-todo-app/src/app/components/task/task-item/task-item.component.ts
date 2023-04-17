@@ -4,7 +4,7 @@ import { map, catchError, of, finalize } from 'rxjs';
 import { TaskHttpService } from 'src/app/http/task.http.service';
 import { Task } from 'src/app/models/task';
 import { removeTask, setError, setLoading } from 'src/app/store/actions';
-import { TaskStoreState } from 'src/app/store/model';
+import { AppState } from 'src/app/store/models';
 
 @Component({
   selector: 'app-task-item',
@@ -14,7 +14,7 @@ export class TaskItemComponent {
   @Input() task!: Task;
 
   constructor(
-    private store: Store<TaskStoreState>,
+    private store: Store<AppState>,
     private taskHttpService: TaskHttpService
   ) {}
 

@@ -16,12 +16,12 @@ Installation:
 Setup:
 
 1. Create `store` folder
-1. Create `model` file
-1. Add `State` interface to model
+1. Create `models` file
+1. Add `State` interface to models
 1. Create `index` file
 1. Add `ActionReducerMap` to index
 1. Add `reducers` to `StoreModule.forRoot(reducers)`
-1. Add `TaskState, TaskStoreState` interface to model
+1. Add `TaskState, TaskStoreState` interface to models
 1. Add `initial` file
 1. Add `initialState` to initial
 1. Add `actions` file
@@ -32,6 +32,8 @@ Setup:
 1. Add `selectors` file
 1. Create `createFeatureSelector`in selectors file
 1. Create `createSelector` in selectors file
+1. Create a `constants` file
+1. Create store state constant variable in constants file
 
 Usage:
 

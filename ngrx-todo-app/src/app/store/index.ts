@@ -1,7 +1,8 @@
 import { ActionReducerMap } from '@ngrx/store';
-import { State } from './model';
+import { AppState } from './models';
 import { taskReducer } from './reducers';
+import { APP_STATE_TASK } from './constants';
 
-export const reducers: ActionReducerMap<State> = {
-  taskReducer,
+export const reducers: ActionReducerMap<AppState> = {
+  [APP_STATE_TASK]: taskReducer,
 };

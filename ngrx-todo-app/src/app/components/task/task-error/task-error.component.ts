@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { TaskStoreState } from 'src/app/store/model';
+import { AppState } from 'src/app/store/models';
 import { getError } from 'src/app/store/selectors';
 
 @Component({
@@ -10,7 +10,7 @@ import { getError } from 'src/app/store/selectors';
 export class TaskErrorComponent {
   error: string | null = null;
 
-  constructor(private store: Store<TaskStoreState>) {
+  constructor(private store: Store<AppState>) {
     this.store.select(getError).subscribe(error => (this.error = error));
   }
 }

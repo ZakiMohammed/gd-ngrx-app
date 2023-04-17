@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { TaskStoreState } from 'src/app/store/model';
+import { AppState } from 'src/app/store/models';
 import { getLoading } from 'src/app/store/selectors';
 
 @Component({
@@ -10,7 +10,7 @@ import { getLoading } from 'src/app/store/selectors';
 export class SpinnerComponent {
   loading = false;
 
-  constructor(private store: Store<TaskStoreState>) {
+  constructor(private store: Store<AppState>) {
     this.store.select(getLoading).subscribe(loading => (this.loading = loading));
   }
 }

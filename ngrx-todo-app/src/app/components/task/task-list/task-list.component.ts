@@ -4,7 +4,7 @@ import { map, catchError, of, finalize } from 'rxjs';
 import { TaskHttpService } from 'src/app/http/task.http.service';
 import { Task } from 'src/app/models/task';
 import { getAllTask, setError, setLoading } from 'src/app/store/actions';
-import { TaskStoreState } from 'src/app/store/model';
+import { AppState } from 'src/app/store/models';
 import { getTasks } from 'src/app/store/selectors';
 
 @Component({
@@ -15,7 +15,7 @@ export class TaskListComponent implements OnInit {
   tasks: Task[] = [];
 
   constructor(
-    private store: Store<TaskStoreState>,
+    private store: Store<AppState>,
     private taskHttpService: TaskHttpService
   ) {
     this.store.select(getTasks).subscribe(tasks => (this.tasks = tasks));

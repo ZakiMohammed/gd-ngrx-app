@@ -4,7 +4,7 @@ import { map, catchError, of, finalize } from 'rxjs';
 import { TaskHttpService } from 'src/app/http/task.http.service';
 import { Task } from 'src/app/models/task';
 import { addTask, setError, setLoading } from 'src/app/store/actions';
-import { TaskStoreState } from 'src/app/store/model';
+import { AppState } from 'src/app/store/models';
 import { v4 as uuid } from 'uuid';
 
 @Component({
@@ -15,7 +15,7 @@ export class TaskFormComponent {
   title = '';
 
   constructor(
-    private store: Store<TaskStoreState>,
+    private store: Store<AppState>,
     private taskHttpService: TaskHttpService
   ) {}
 

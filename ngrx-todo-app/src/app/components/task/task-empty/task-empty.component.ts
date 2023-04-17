@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Task } from 'src/app/models/task';
-import { TaskStoreState } from 'src/app/store/model';
+import { AppState } from 'src/app/store/models';
 import { getTasks } from 'src/app/store/selectors';
 
 @Component({
@@ -11,7 +11,7 @@ import { getTasks } from 'src/app/store/selectors';
 export class TaskEmptyComponent {
   tasks: Task[] = [];
 
-  constructor(private store: Store<TaskStoreState>) {
+  constructor(private store: Store<AppState>) {
     this.store.select(getTasks).subscribe(tasks => (this.tasks = tasks));
   }
 }
